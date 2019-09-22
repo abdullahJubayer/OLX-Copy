@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/search_view_back"
+    android:layout_margin="3dp"
+    >
+
+    <ImageView
+        android:id="@+id/new_add_activity_Design_icon"
+        android:layout_centerInParent="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_account"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/new_add_activity_Design_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/new_add_activity_Design_icon"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

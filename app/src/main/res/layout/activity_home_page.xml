@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage.Home_page"
+    android:background="#FFFFFF"
+    android:id="@+id/coordinatorLayout"
+    android:padding="5dp"
+    >
+
+    <!--Appbar layout For CollapsingToolbarLayout-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            app:contentScrim="#FFFFFF"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--CollapsingToolbar Item Start-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                android:padding="10dp"
+            >
+                <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+                    <!--Location layout Start-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_alignParentStart="true"
+                   android:id="@+id/home_location_id"
+                   android:layout_marginBottom="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_location"
+                       android:paddingEnd="5dp"
+
+                       />
+                   <TextView
+                       android:id="@+id/home_activity_location_id"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Dhaka"
+                       android:textSize="16sp"
+                       android:textStyle="bold"
+                       android:paddingEnd="10dp"
+                       />
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+                    <!--Location layout end-->
+
+                    <!--Filter Image-->
+                    <ImageView
+                       android:layout_alignParentEnd="true"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_filter_result"
+                       android:paddingEnd="5dp"
+                   />
+           </RelativeLayout>
+
+                <!--Search view Layout-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--CollapsingToolbar Item end-->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Find a Product"
+            android:background="@drawable/search_view_back"
+            >
+
+        </androidx.appcompat.widget.SearchView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Activity Content Start-->
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        >
+
+        <!--This layout separate popular product item and top Item-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Popular Product Layout Start-->
+            <!--All 3 Row popular Product in this layout-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Product"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    />
+                <!--First Row popular Product in this layout-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <!--First Row Popular Product-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <!--This layout separate Popular Product Icon and text-->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/home_activity_car_id"
+                            android:background="@drawable/car_shap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_car"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Car"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--This layout separate Popular Product Icon and text-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:background="@drawable/bike_shap"
+                            android:id="@+id/home_activity_bike_id"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_motorbike"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bike"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--This layout separate Popular Product Icon and text-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/home_activity_MobilePhone_id"
+                            android:background="@drawable/mobile_shap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_smartphone_"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile Phone"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!-- First Row popular Product in this layout-->
+
+                <!--Third Row popular Product in this layout-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+
+                    >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:background="@drawable/furnichair_shap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_furnichair"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Furnichair"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:background="@drawable/book_shap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_book"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Book"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:background="@drawable/forword_shap"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_arrow_forward"
+                                />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See More"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!--Third Row popular Product in this layout-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--All 3 Row popular Product in this layout  end-->
+
+            <!--Top Product Item start hare-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_margin="5dp"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Top Adds"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/home_recycler_item"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--Top Product Item End hare-->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <!--This layout separate popular product item and top Item-->
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Bottom Navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
+        android:background="@color/white"
+        app:itemIconTint="@drawable/bottom_navigation_color"
+        app:itemTextColor="@drawable/bottom_navigation_color"
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

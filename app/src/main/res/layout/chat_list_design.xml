@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/chat_list_userImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/bike"
+            app:civ_border_color="@color/grey"
+            app:civ_border_width="1dp"
+            app:civ_shadow="true"
+            />
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/chat_list_userImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/chat_list_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abdullah Jubayer"
+                android:textSize="25sp"
+                android:paddingStart="10dp"
+                />
+            <ImageView
+                android:id="@+id/chat_list_userActiveImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_active"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:paddingEnd="20dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
